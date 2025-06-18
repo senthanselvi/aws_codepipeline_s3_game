@@ -1,76 +1,78 @@
 body {
-    font-family: 'Roboto', sans-serif; 
-    background-color: #282c34; 
-    color: #ffffff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: auto;
+    max-width: 800px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #3c404d; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
-    border-radius: 15px; 
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: white; 
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
 
 .instructions {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #adbac7;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#timer, #moves {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #444;
+}
+
+.message {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #e74c3c;
 }
 
 #game-board {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
-    padding: 20px;
+    margin-top: 20px;
 }
 
-.card {
-    width: 211.8px;
-    height: 166.2px;
-    background-color: #565c6f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.card img {
+#game-board img {
     width: 100%;
+    max-width: 140px;
     height: auto;
-    visibility: hidden; /* Hide images by default */
-    display: block;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: transform 0.2s;
 }
 
-.card.show img {
-    visibility: visible; /* Show image when card is flipped */
+#game-board img:hover {
+    transform: scale(1.05);
 }
 
 #start-game {
-    background-color: #4caf50;
+    background-color: #3498db;
     color: white;
     padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
 #start-game:hover {
-    background-color: #43a047; /* Darker on hover */
-    transform: scale(1.05); /* Slightly enlarges on hover */
+    background-color: #2980b9;
 }
